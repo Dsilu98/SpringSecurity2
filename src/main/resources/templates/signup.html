@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This is Signup page</title>
+</head>
+<body>
+
+	<nav th:replace="base::basecontent"></nav>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-2">
+					<div class="my-card mt-2">
+					<div class="container text-center">
+						<img style="width: 80px" alt="" th:src="@{/img/signup.png}">
+					</div>
+						<h1 class="text-center">Register Here!!</h1>
+						<form action="" th:action="@{/do_register}" method="post">
+							<div class="form-group">
+								<label for="name-field">Your Name</label> <input type="text"
+									class="form-control" id="name-field"
+									aria-describedby="emailHelp" placeholder="Enter Here"
+									required="required">
+							</div>
+
+							<div class="form-group">
+								<label for="email-field">Your Email</label> <input type="email"
+									class="form-control" id="email-field"
+									aria-describedby="emailHelp" placeholder="Enter Here"
+									required="required">
+							</div>
+							<!-- password -->
+
+							<div class="form-group">
+								<label for="password-field">Your Password</label> <input
+									type="password" class="form-control" id="password-field"
+									aria-describedby="emailHelp" placeholder="Enter Here"
+									required="required">
+							</div>
+							<div class="form-group">
+								<textarea rows="10" placeholder="About yourself!!"
+									class="form-control"></textarea>
+							</div>
+							<div class="container">
+								<button type="submit"
+									class="btn bg-primary btn-block text-white">Submit</button>
+								<button type="reset" class="btn bg-warning btn-block text-white">Reset</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
